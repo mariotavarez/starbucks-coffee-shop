@@ -1,0 +1,22 @@
+<section class="my-[11rem] bg-white">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="text-center">
+            <h1 class="mb-4 text-2xl tracking-tight font-extrabold lg:text-5xl text-jungleGreen">
+                We can't find the page you're looking for.
+            </h1>
+            <p>
+                Don't worry, it's just a little spilled Honey Citrus Mint Tea. Let us help you clean that up and find
+                your way! Mop up
+                the spill to reveal something underneath.
+            </p>
+        </div>
+        <div class="flex items-center justify-center mt-20">
+            <div class="relative" (mousemove)="eraseCoffee($event)">
+                <canvas #coffeeCanvas class="absolute -left-20" width="200" height="300"></canvas>
+            </div>
+            <div class="w-1/4">
+                <Coffee />
+            </div>
+        </div>
+    </div>
+</section>

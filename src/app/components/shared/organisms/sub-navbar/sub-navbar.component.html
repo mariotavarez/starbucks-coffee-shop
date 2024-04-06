@@ -1,0 +1,27 @@
+<nav
+  class="bg-gray-100 dark:bg-gray-100 w-full z-20 top-20 start-0 border border-gray-300"
+>
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-start mx-auto p-2"
+  >
+    <div
+      class="items-start justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-language"
+    >
+      <ul
+        class="flex flex-col ml-28 font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 text-[12px]"
+      >
+        @for (subNavbarItem of subNavbarItems(); track subNavbarItem.id) {
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-1 text-gray-900"
+            aria-current="page"
+            >{{ subNavbarItem.attributes.name }}</a
+          >
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

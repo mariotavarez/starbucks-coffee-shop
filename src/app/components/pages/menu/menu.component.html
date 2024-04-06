@@ -1,0 +1,18 @@
+@if(menuState().isLoading) {
+<div class="mx-32 my-16 w-[60vw] h-[100vh]">
+  <div class="flex justify-center items-center h-96">
+    <Spinner />
+  </div>
+</div>
+} @else {
+<div>
+  <p class="text-3xl font-bold text-gray-900 dark:text-gray-900">Menu</p>
+
+  @for(menu of menuState().menuItems.data | slice: 0:MAX_ITEMS; track menu.id) {
+  <div intersected (triggerReached)="increaseMaxItems()">
+    <HeaderSection [title]="menu.attributes.name" />
+    <Catalog [items]="menu.attributes.menu_details.data" />
+  </div>
+  }
+</div>
+}

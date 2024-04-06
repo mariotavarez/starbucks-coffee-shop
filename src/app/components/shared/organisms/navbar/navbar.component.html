@@ -1,0 +1,60 @@
+<nav class="bg-white dark:bg-white w-full z-20 top-0 start-0">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <div class="flex items-center">
+      <Logo />
+      <ul
+        class="flex flex-col ml-10 font-bold p-4 md:p-0 mt-4 rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 text-[15px]"
+      >
+        @for(item of navbarItems(); track item.id) {
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 text-gray-900 rounded"
+            aria-current="page"
+            >{{ item.attributes.name | uppercase }}</a
+          >
+        </li>
+        }
+      </ul>
+    </div>
+    <div
+      class="flex gap-4 w-auto justify-between align-middle"
+      id="navbar-default"
+    >
+      <div class="flex gap-2 items-center mr-10">
+        <svg
+          aria-hidden="true"
+          class="valign-middle pr2"
+          focusable="false"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 20 20"
+          style="
+            width: 18px;
+            height: 18px;
+            overflow: visible;
+            fill: currentcolor;
+          "
+        >
+          <path
+            d="M12,11.475 C10.5214286,11.475 9.32142857,10.299 9.32142857,8.85 C9.32142857,7.401 10.5214286,6.225 12,6.225 C13.4785714,6.225 14.6785714,7.401 14.6785714,8.85 C14.6785714,10.299 13.4785714,11.475 12,11.475 M12,1.5 C7.85357143,1.5 4.5,4.7865 4.5,8.85 C4.5,14.3625 12,22.5 12,22.5 C12,22.5 19.5,14.3625 19.5,8.85 C19.5,4.7865 16.1464286,1.5 12,1.5"
+          ></path>
+        </svg>
+        Find a store
+      </div>
+      <button
+        type="button"
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-1.5 me-2 dark:bg-white dark:text-gray-900 dark:border-gray-600 dark:hover:bg-gray-100 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+      >
+        Sign in
+      </button>
+      <button
+        type="button"
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-1.5 me-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+      >
+        Join now
+      </button>
+    </div>
+  </div>
+</nav>
